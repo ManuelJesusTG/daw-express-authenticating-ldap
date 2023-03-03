@@ -21,9 +21,8 @@ pipeline {
 
     stage('Deliver/Despliegue') {
       steps {
-        sh 'npm start & sleep 1 > .pidfile'
+        sh 'npm start & sleep 1'
         input 'Para terminar de usar el sitio web click en el boton "Proceed"'
-        sh 'kill -l'
       }
     }
 
