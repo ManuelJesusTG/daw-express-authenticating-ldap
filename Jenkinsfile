@@ -23,7 +23,7 @@ pipeline {
       steps {
         sh 'npm start & sleep 1 > .pidfile'
         input 'Para terminar de usar el sitio web click en el boton "Proceed"'
-        sh 'kill $(cat .pidfile)'
+        sh 'kill -l'
       }
     }
 
