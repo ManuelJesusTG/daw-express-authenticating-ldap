@@ -19,5 +19,13 @@ pipeline {
       }
     }
 
+    stage('Deliver/Despliegue') {
+      steps {
+        sh 'npm start'
+        input 'Para terminar de usar el sitio web click en el boton "Proceed"'
+        sh 'kill $(cat .pidfile)'
+      }
+    }
+
   }
 }
